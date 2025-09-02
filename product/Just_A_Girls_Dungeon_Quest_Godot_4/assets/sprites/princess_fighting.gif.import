@@ -1,0 +1,15 @@
+[remap]
+
+importer="import_gif_to_sprite_frames"
+type="SpriteFrames"
+uid="uid://6djlchrv28io"
+path="res://.godot/imported/princess_fighting.gif-c6bb708285c81aa5cfc102154ca4d4c4.tres"
+
+[deps]
+
+source_file="res://assets/sprites/princess_fighting.gif"
+dest_files=["res://.godot/imported/princess_fighting.gif-c6bb708285c81aa5cfc102154ca4d4c4.tres"]
+
+[params]
+
+frames_per_second=30

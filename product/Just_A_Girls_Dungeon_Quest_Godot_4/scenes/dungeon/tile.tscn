@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://crrb3wextm2hg"]
+
+[ext_resource type="Script" path="res://scripts/dungeon/tile.gd" id="1_yb8gs"]
+[ext_resource type="Texture2D" uid="uid://bmmh47iygq30r" path="res://assets/sprites/exclamation_mark.svg" id="2_keq5e"]
+
+[node name="Tile" type="Node3D"]
+script = ExtResource("1_yb8gs")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.8, 0, 0, 0, -3.49691e-08, -0.8, 0, 0.8, -3.49691e-08, 0, -0.01, 0)
+shaded = true
+texture_filter = 0
+texture = ExtResource("2_keq5e")

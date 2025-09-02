@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnmrogj0ldrhe"]
+
+[ext_resource type="Script" path="res://scripts/core/save_slot_button.gd" id="1_ovqky"]
+[ext_resource type="Theme" uid="uid://cc63np20yp7j" path="res://data/theme/button_theme_1.tres" id="1_xypsm"]
+
+[node name="SaveSlotButton" type="Button"]
+custom_minimum_size = Vector2(0, 50)
+theme = ExtResource("1_xypsm")
+script = ExtResource("1_ovqky")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SlotLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.3
+theme_override_font_sizes/font_size = 24
+text = "Slot 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayerInfoLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.94902, 0.368627, 0.576471, 1)
+theme_override_font_sizes/font_size = 24
+text = "Player Name (Lv. X)"
+vertical_alignment = 1
+
+[node name="DateLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = "04/22/2025 12:34"
+horizontal_alignment = 2
+vertical_alignment = 1

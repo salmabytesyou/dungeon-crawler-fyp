@@ -1,0 +1,14 @@
+[remap]
+
+importer="import_gif_to_animated_texture"
+type="AnimatedTexture"
+uid="uid://k72v007dxr2r"
+path="res://.godot/imported/ui_next_button.gif-8dd1b4b4cf8f373d43b87215a0ebf6b1.tres"
+
+[deps]
+
+source_file="res://assets/ui/ui_next_button.gif"
+dest_files=["res://.godot/imported/ui_next_button.gif-8dd1b4b4cf8f373d43b87215a0ebf6b1.tres"]
+
+[params]
+

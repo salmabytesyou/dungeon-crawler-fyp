@@ -1,0 +1,44 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://cc63np20yp7j"]
+
+[ext_resource type="Texture2D" uid="uid://cdb652e5b8iv5" path="res://assets/ui/menu_window_2_transparent.png" id="1_m5mxb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bn4of"]
+texture = ExtResource("1_m5mxb")
+texture_margin_left = 9.0
+texture_margin_top = 9.0
+texture_margin_right = 10.0
+texture_margin_bottom = 9.0
+region_rect = Rect2(1, 4, 143, 71)
+modulate_color = Color(0.752941, 0.752941, 0.752941, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0il4c"]
+texture = ExtResource("1_m5mxb")
+texture_margin_left = 9.0
+texture_margin_top = 9.0
+texture_margin_right = 10.0
+texture_margin_bottom = 9.0
+region_rect = Rect2(1, 4, 143, 71)
+modulate_color = Color(0.752941, 0.752941, 0.752941, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s3s42"]
+texture = ExtResource("1_m5mxb")
+texture_margin_left = 9.0
+texture_margin_top = 9.0
+texture_margin_right = 10.0
+texture_margin_bottom = 9.0
+region_rect = Rect2(1, 4, 143, 71)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_maidw"]
+texture = ExtResource("1_m5mxb")
+texture_margin_left = 9.0
+texture_margin_top = 9.0
+texture_margin_right = 10.0
+texture_margin_bottom = 9.0
+region_rect = Rect2(1, 4, 143, 71)
+
+[resource]
+Button/font_sizes/font_size = 24
+Button/styles/focus = SubResource("StyleBoxTexture_bn4of")
+Button/styles/hover = SubResource("StyleBoxTexture_0il4c")
+Button/styles/normal = SubResource("StyleBoxTexture_s3s42")
+Button/styles/pressed = SubResource("StyleBoxTexture_maidw")

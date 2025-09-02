@@ -1,0 +1,121 @@
+[gd_scene load_steps=9 format=3 uid="uid://edksq1ytbons"]
+
+[ext_resource type="Script" path="res://scripts/ui/dialogue_box.gd" id="1_elqfg"]
+[ext_resource type="Theme" uid="uid://ur5r6b18cpuw" path="res://data/theme/pink_box_theme.tres" id="2_l2ggk"]
+[ext_resource type="Texture2D" uid="uid://k72v007dxr2r" path="res://assets/ui/ui_next_button.gif" id="3_wwd4q"]
+[ext_resource type="Texture2D" uid="uid://b6yw05pue20u" path="res://assets/ui/ui_next_button_hover.gif" id="4_iamsj"]
+
+[sub_resource type="Animation" id="Animation_liftc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DialoguePanel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ww7kl"]
+resource_name = "fade_in"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DialoguePanel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_vs2tm"]
+resource_name = "fade_out"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DialoguePanel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1icgl"]
+_data = {
+"RESET": SubResource("Animation_liftc"),
+"fade_in": SubResource("Animation_ww7kl"),
+"fade_out": SubResource("Animation_vs2tm")
+}
+
+[node name="DialogueBox" type="CanvasLayer"]
+script = ExtResource("1_elqfg")
+
+[node name="DialoguePanel" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -216.0
+offset_top = 30.0
+offset_right = 216.0
+offset_bottom = 179.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("2_l2ggk")
+
+[node name="DialogueText" type="RichTextLabel" parent="DialoguePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = -81.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_l2ggk")
+theme_override_font_sizes/normal_font_size = 20
+text = "TEST
+dfhdjhgkjsdkfks"
+fit_content = true
+scroll_active = false
+
+[node name="NextIcon" type="TextureButton" parent="DialoguePanel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -45.0
+offset_top = -46.0
+offset_right = -11.0
+offset_bottom = -7.0
+grow_horizontal = 0
+grow_vertical = 0
+action_mode = 0
+texture_normal = ExtResource("3_wwd4q")
+texture_hover = ExtResource("4_iamsj")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_1icgl")
+}
+
+[connection signal="pressed" from="DialoguePanel/NextIcon" to="." method="_on_next_icon_pressed"]

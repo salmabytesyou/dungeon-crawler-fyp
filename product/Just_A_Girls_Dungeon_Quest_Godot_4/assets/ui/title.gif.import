@@ -1,0 +1,14 @@
+[remap]
+
+importer="import_gif_to_animated_texture"
+type="AnimatedTexture"
+uid="uid://ck0bh7ojdamwf"
+path="res://.godot/imported/title.gif-e13da3815eee9cbd885c94d2144c4559.tres"
+
+[deps]
+
+source_file="res://assets/ui/title.gif"
+dest_files=["res://.godot/imported/title.gif-e13da3815eee9cbd885c94d2144c4559.tres"]
+
+[params]
+

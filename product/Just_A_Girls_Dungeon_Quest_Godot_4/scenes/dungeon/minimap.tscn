@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnwtme7lecdic"]
+
+[ext_resource type="Script" path="res://scripts/dungeon/minimap.gd" id="1_8llde"]
+[ext_resource type="Texture2D" uid="uid://g4edx47ivu0i" path="res://assets/ui/menu_window_1_transparent.png" id="2_i8ebv"]
+
+[node name="MiniMap" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8llde")
+cell_color = Color(1, 0.666667, 0.694118, 1)
+player_color = Color(0.972549, 1, 0.54902, 1)
+ladder_color = Color(0.54902, 0.854902, 1, 1)
+tile_color = Color(1, 0.490196, 0, 1)
+enemy_color = Color(1, 0.0901961, 0.239216, 1)
+wall_color = Color(1, 0.4, 0.458824, 1)
+text_color = Color(1, 1, 1, 1)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_right = 210.0
+offset_bottom = 200.0
+texture = ExtResource("2_i8ebv")
+region_rect = Rect2(0, 0, 200, 200)
+patch_margin_left = 24
+patch_margin_top = 24
+patch_margin_right = 24
+patch_margin_bottom = 24
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1

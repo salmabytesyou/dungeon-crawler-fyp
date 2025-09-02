@@ -1,0 +1,54 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://qcybari1xd00"]
+
+[ext_resource type="FontFile" uid="uid://lc42ow22fhp3" path="res://font/rainyhearts.ttf" id="1_4us6i"]
+[ext_resource type="Texture2D" uid="uid://cdb652e5b8iv5" path="res://assets/ui/menu_window_2_transparent.png" id="1_b3uhe"]
+[ext_resource type="Texture2D" uid="uid://cwxayahafdf2a" path="res://assets/ui/menu_window_4.png" id="2_s6r72"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2ssry"]
+texture = ExtResource("2_s6r72")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(0, 0, 46, 46)
+modulate_color = Color(1, 0.584314, 0.643137, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rj8jl"]
+texture = ExtResource("2_s6r72")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(0, 0, 46, 46)
+modulate_color = Color(1, 0.584314, 0.643137, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bxkhj"]
+texture = ExtResource("2_s6r72")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(0, 0, 46, 46)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dqo8a"]
+texture = ExtResource("1_b3uhe")
+texture_margin_left = 9.0
+texture_margin_top = 9.0
+texture_margin_right = 10.0
+texture_margin_bottom = 9.0
+region_rect = Rect2(1, 4, 143, 71)
+
+[resource]
+Button/colors/font_color = Color(1, 0.376471, 0.443137, 1)
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_4us6i")
+Button/styles/focus = SubResource("StyleBoxTexture_2ssry")
+Button/styles/hover = SubResource("StyleBoxTexture_rj8jl")
+Button/styles/normal = SubResource("StyleBoxTexture_bxkhj")
+Panel/styles/panel = SubResource("StyleBoxTexture_dqo8a")

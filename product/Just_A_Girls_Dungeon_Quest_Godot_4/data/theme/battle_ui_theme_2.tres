@@ -1,0 +1,16 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://8cf63038hj1m"]
+
+[ext_resource type="StyleBox" uid="uid://bhk5vx72ivnhs" path="res://data/theme/light_style_box.tres" id="1_epvx3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mw7dm"]
+bg_color = Color(0.384314, 0.811765, 0.141176, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[resource]
+/styles/panel = ExtResource("1_epvx3")
+Label/colors/font_color = Color(0.988235, 0.34902, 0.627451, 1)
+Panel/styles/panel = ExtResource("1_epvx3")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_mw7dm")

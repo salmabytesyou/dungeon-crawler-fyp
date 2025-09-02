@@ -1,0 +1,198 @@
+[gd_scene load_steps=11 format=3 uid="uid://h325lxmaboy8"]
+
+[ext_resource type="Script" path="res://scripts/town.gd" id="1_brnue"]
+[ext_resource type="Texture2D" uid="uid://pwhxhid70tkl" path="res://assets/background/outside_castle.png" id="2_anssc"]
+[ext_resource type="Texture2D" uid="uid://ca525to53ksl0" path="res://assets/portraits/princess_outfit_1.png" id="3_8mhnc"]
+[ext_resource type="Texture2D" uid="uid://k72v007dxr2r" path="res://assets/ui/ui_next_button.gif" id="3_ab8es"]
+[ext_resource type="Texture2D" uid="uid://b6yw05pue20u" path="res://assets/ui/ui_next_button_hover.gif" id="4_67tke"]
+[ext_resource type="Texture2D" uid="uid://w23mgl37apm0" path="res://assets/portraits/princess_outfit_1_head_neutral.png" id="4_44577"]
+[ext_resource type="Theme" uid="uid://dejysjjwhwal8" path="res://data/theme/title_theme.tres" id="5_kox8p"]
+[ext_resource type="Texture2D" uid="uid://cbhckgwowu4dl" path="res://assets/portraits/mysterious_man.png" id="6_px5jx"]
+[ext_resource type="Texture2D" uid="uid://cvj6er8tgav0r" path="res://assets/ui/message_window_2.png" id="7_8638v"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6nntq"]
+font_size = 26
+font_color = Color(1, 0.635294, 0.67451, 1)
+
+[node name="Town" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_brnue")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = -149.0
+offset_top = 1.0
+offset_right = 1333.0
+offset_bottom = 666.0
+texture = ExtResource("2_anssc")
+stretch_mode = 4
+metadata/_edit_lock_ = true
+
+[node name="MenuPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 18.0
+offset_right = 426.0
+offset_bottom = 409.0
+size_flags_vertical = 3
+theme = ExtResource("5_kox8p")
+
+[node name="MenuContainer" type="VBoxContainer" parent="MenuPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 31.0
+offset_top = 36.0
+offset_right = -33.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("5_kox8p")
+alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -16.0
+offset_right = 1332.0
+offset_bottom = 649.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0235294, 0.0156863, 0.0156863, 0.215686)
+metadata/_edit_lock_ = true
+
+[node name="MainCharacter" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 628.0
+offset_top = 67.0
+offset_right = 1144.0
+offset_bottom = 670.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+metadata/_edit_lock_ = true
+
+[node name="body" type="Sprite2D" parent="MainCharacter"]
+position = Vector2(-70, 208)
+texture = ExtResource("3_8mhnc")
+centered = false
+
+[node name="head" type="Sprite2D" parent="MainCharacter"]
+position = Vector2(235, 127)
+texture = ExtResource("4_44577")
+
+[node name="MysteriousMan" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(318, 339)
+scale = Vector2(1.595, 1.3)
+texture = ExtResource("6_px5jx")
+flip_h = true
+
+[node name="DialoguePanel" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 213.0
+offset_top = 444.0
+offset_right = 923.0
+offset_bottom = 629.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture = ExtResource("7_8638v")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="DialogueText" type="RichTextLabel" parent="DialoguePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 22.0
+offset_top = 23.0
+offset_right = -72.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 24
+
+[node name="DialogueButton" type="TextureButton" parent="DialoguePanel"]
+custom_minimum_size = Vector2(52, 60)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -63.0
+offset_top = -67.0
+offset_right = -11.0
+offset_bottom = -7.0
+grow_horizontal = 0
+grow_vertical = 0
+action_mode = 0
+texture_normal = ExtResource("3_ab8es")
+texture_hover = ExtResource("4_67tke")
+
+[node name="ConfirmPanel" type="Panel" parent="."]
+layout_mode = 2
+offset_left = 371.0
+offset_top = 236.0
+offset_right = 822.0
+offset_bottom = 369.0
+theme = ExtResource("5_kox8p")
+
+[node name="ConfirmLabel" type="Label" parent="ConfirmPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -193.5
+offset_top = -42.0
+offset_right = 193.5
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Are you sure you 
+want to exit the game?"
+label_settings = SubResource("LabelSettings_6nntq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="YesButton" type="Button" parent="ConfirmPanel"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 148.0
+offset_right = 223.0
+offset_bottom = 184.0
+text = "Yes"
+
+[node name="NoButton" type="Button" parent="ConfirmPanel"]
+layout_mode = 0
+offset_left = 219.0
+offset_top = 149.0
+offset_right = 367.0
+offset_bottom = 185.0
+text = "No"
+
+[connection signal="pressed" from="ConfirmPanel/YesButton" to="." method="_on_yes_button_pressed"]
+[connection signal="pressed" from="ConfirmPanel/NoButton" to="." method="_on_no_button_pressed"]

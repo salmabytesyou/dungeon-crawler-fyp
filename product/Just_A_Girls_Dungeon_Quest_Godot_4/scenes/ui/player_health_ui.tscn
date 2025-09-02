@@ -1,0 +1,164 @@
+[gd_scene load_steps=6 format=3 uid="uid://lr1qrmecyo67"]
+
+[ext_resource type="Script" path="res://scripts/ui/player_health_ui.gd" id="1_w2bxd"]
+[ext_resource type="Texture2D" uid="uid://dsjqfc573jc5h" path="res://assets/ui/menu_window_2.png" id="2_5yvcy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4oaxb"]
+texture = ExtResource("2_5yvcy")
+texture_margin_left = 10.0
+texture_margin_top = 9.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+region_rect = Rect2(0, 4, 144, 71)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3a6k0"]
+bg_color = Color(0.403922, 0.87451, 0.309804, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wnuc1"]
+bg_color = Color(0.992157, 0.776471, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="PlayerHealthUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w2bxd")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -59.0
+offset_right = 365.0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_4oaxb")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 599.0
+offset_right = 699.0
+offset_bottom = 678.0
+scale = Vector2(0.5, 0.5)
+alignment = 1
+
+[node name="DetailsVBox" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 8
+alignment = 1
+
+[node name="PlayerName" type="Label" parent="HBoxContainer/DetailsVBox"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Player Name"
+
+[node name="PlayerLvl" type="Label" parent="HBoxContainer/DetailsVBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.981201, 0.949195, 0.617609, 1)
+theme_override_font_sizes/font_size = 25
+text = "Lv"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HealthVBox" type="VBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(225, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Health" type="Label" parent="HBoxContainer/HealthVBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 25
+text = "Health"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HealthBar" type="ProgressBar" parent="HBoxContainer/HealthVBox"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 6
+tooltip_text = "Health"
+theme_override_styles/fill = SubResource("StyleBoxFlat_3a6k0")
+rounded = true
+show_percentage = false
+
+[node name="HealthLabel" type="Label" parent="HBoxContainer/HealthVBox/HealthBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = -19.5
+offset_right = 62.0
+offset_bottom = 19.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 25
+text = "100/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EXPVBox" type="VBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(225, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Exp" type="Label" parent="HBoxContainer/EXPVBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 25
+text = "Experience"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EXPBar" type="ProgressBar" parent="HBoxContainer/EXPVBox"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 6
+tooltip_text = "Health"
+theme_override_styles/fill = SubResource("StyleBoxFlat_wnuc1")
+rounded = true
+show_percentage = false
+
+[node name="EXPLabel" type="Label" parent="HBoxContainer/EXPVBox/EXPBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = -19.5
+offset_right = 62.0
+offset_bottom = 19.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 25
+text = "100/100"
+horizontal_alignment = 1
+vertical_alignment = 1

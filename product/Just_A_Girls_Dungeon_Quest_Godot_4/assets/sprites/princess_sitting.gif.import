@@ -1,0 +1,14 @@
+[remap]
+
+importer="import_gif_to_animated_texture"
+type="AnimatedTexture"
+uid="uid://ihjk3bukdx67"
+path="res://.godot/imported/princess_sitting.gif-7b476b759c3b2da209674b11c75ead5a.tres"
+
+[deps]
+
+source_file="res://assets/sprites/princess_sitting.gif"
+dest_files=["res://.godot/imported/princess_sitting.gif-7b476b759c3b2da209674b11c75ead5a.tres"]
+
+[params]
+
